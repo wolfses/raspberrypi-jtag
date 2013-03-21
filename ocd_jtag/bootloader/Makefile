@@ -1,6 +1,6 @@
 
-#ARMGNU ?= arm-none-eabi
-ARMGNU ?= arm-elf
+ARMGNU ?= arm-none-eabi
+#ARMGNU ?= arm-elf
 COPS = -Wall -O2 -nostdlib -nostartfiles -ffreestanding 
 SDB   = gdb-multiarch
 JDB   = $(ARMGNU)-gdb

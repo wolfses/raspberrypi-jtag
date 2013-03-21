@@ -24,6 +24,7 @@ extern void dummy ( unsigned int );
 #define TIMEOUT 1000000
 
 
+void restore_atag(void);
 //-------------------------------------------------------------------------
 int notmain ( void )
 {
@@ -70,6 +71,8 @@ int notmain ( void )
 //ARM_TCK    13/25 GPIO_GEN6 P1-22 OUT (25 ALT4)
 //ARM_TDI     4/26 GPIO_GCLK P1-7   IN ( 4 ALT5)
 //ARM_TMS    12/27 CAM_GPIO  S5-11 OUT (27 ALT4) v1 board
+
+	restore_atag();	
 
     PUT32(ARM_TIMER_CTL,0x00F90000);
     PUT32(ARM_TIMER_CTL,0x00F90200);
